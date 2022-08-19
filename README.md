@@ -1,4 +1,4 @@
-# [VISOR](https://epic-kitchens.github.io/VISOR) Frame extraction
+# [VISOR frame extraction](https://epic-kitchens.github.io/VISOR) 
 This repository is to extract the dense frames of VISOR interpolations. VISOR website: (https://epic-kitchens.github.io/VISOR)
 
 
