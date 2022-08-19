@@ -3,29 +3,26 @@ This repository is to visualize VISOR dataset (both sparse and dense). VISOR web
 
 
 ## How to use
-Open `demo.py` script and edit the paths with your local paths. `demo.py` script will call `folder_of_jsons_to_masks` function from vis.py the function support has those arguments:
+Open `generate_dense_frames.py` script and edit the paths with your local paths. The script will contains `generate_dense_images_from_video_jsons` function with those arguments:
 
-`json_files_path`: a path to JSON files you want to visualize.<br /> The path file structure would be like:<br>
+`json_files_path`: a path to JSON files you want to generate dense JPG images for.<br /> The path file structure would be like:<br>
 -- /path/to/json/files/folder<br>
----- P01_01.json<br>
----- P01_102.json<br>
----- PXX_XXX.json<br>
+---- P01_01_interpolations.json<br>
+---- P01_102_interpolations.json<br>
+---- PXX_XXX_interpolations.json<br>
  
-`output_directory`: a path where the output masks/overlay would be generated.<br />
-`is_overlay` (optional): this flag determine if you want to generate masks (is_overlay=False) only or overlaid images (is_overlay=True). Default is False.<br />
-`rgb_frames` (optional): a path where VISOR images are in case you want to visualize the output as overlaid images.<br /> The path file structure would be like:<br>
+`output_directory`: a path where the output images would be generated.<br />
+`sparse_rgb_images_root` : a path to VISOR images.<br /> The path file structure would be like:<br>
 -- /path/to/rbg_frames/folder<br>
 ---- P01_01<br>
 ------ P01_01_frame_0000xxxxxx.jpg<br>
 ---- PXX_XXX<br>
 ------ PXX_XXX_frame_0000xxxxxx.jpg<br>
 
-`output_resolution` (optional): output resolution of the generated masks/overlaid images. Default is Full HD (1920x1080)<br />
-`generate_video` (optional): whether you want to create videos from the output images. Default is True
+`videos_path`:
+`output_resolution` (optional): output resolution of the generated images. Default is (854x480) which is the interpolation resolution<br />
 
-After identifying all arguments, just run `python demo.py` and you should get the visualizations in your `output_directory`.
-
-You'll also get a `data_mapping.csv` file in the `output_directory`, this file maps each colour in the PNG images into the object name.
+After identifying all arguments, just run `python generate_dense_frames.py` and you should get the dense images of the choosen videos. The images should be found in your `output_directory`.
 
 
 
