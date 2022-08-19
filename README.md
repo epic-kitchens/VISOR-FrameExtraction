@@ -19,7 +19,12 @@ Open `generate_dense_frames.py` script and edit the paths with your local paths.
 ---- PXX_XXX<br>
 ------ PXX_XXX_frame_0000xxxxxx.jpg<br>
 
-`videos_path`:
+`videos_path`: a path to EPIC-KITCHENS videos. Videos (bulk or one by one) could be downloaded from there: [EPIC-KITCHENS-100](https://data.bris.ac.uk/data/dataset/2g1n6qdydwa9u22shpxqzp0t8m), or from there (code): [EPIC-KITCHENS-100](https://github.com/epic-kitchens/epic-kitchens-download-scripts).<br /> The path file structure would be like:<br>
+-- /path/to/videos/folder<br>
+---- P01_01.MP4<br>
+---- P01_102.MP4<br>
+---- PXX_XX(X).MP4<br>
+
 `output_resolution` (optional): output resolution of the generated images. Default is (854x480) which is the interpolation resolution<br />
 
 After identifying all arguments, just run `python generate_dense_frames.py` and you should get the dense images of the choosen videos. The images should be found in your `output_directory`.
