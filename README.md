@@ -1,5 +1,5 @@
-# [VISOR visualization](https://epic-kitchens.github.io/VISOR)
-This repository is to visualize VISOR dataset (both sparse and dense). VISOR website: (https://epic-kitchens.github.io/VISOR)
+# [VISOR](https://epic-kitchens.github.io/VISOR) Frame extraction
+This repository is to extract the dense frames of VISOR interpolations. VISOR website: (https://epic-kitchens.github.io/VISOR)
 
 
 ## How to use
