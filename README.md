@@ -12,7 +12,7 @@ Open `generate_dense_frames.py` script and edit the paths with your local paths.
 ---- PXX_XXX_interpolations.json<br>
  
 `output_directory`: a path where the output images would be generated.<br />
-`sparse_rgb_images_root` : a path to VISOR images.<br /> The path file structure would be like:<br>
+`sparse_rgb_images_root` : a path to VISOR images. The sparse images would be copied from `sparse_rgb_images_root` to make sure that they're aliged with the sparse masks<br /> The path file structure would be like:<br>
 -- /path/to/rbg_frames/folder<br>
 ---- P01_01<br>
 ------ P01_01_frame_0000xxxxxx.jpg<br>
