@@ -29,6 +29,8 @@ Open `generate_dense_frames.py` script and edit the paths with your local paths.
 
 After identifying all arguments, just run `python generate_dense_frames.py` and you should get the dense images of the choosen videos. The images should be found in your `output_directory`.
 
+## Timestamps for the VISOR frames
+In case you're interested in the timestamps of VISOR frames (as the original EPIC-KITCHENS videos have different frame rate), the `frames_to_timestamps.json` contains the frame-to-timestamp mappings.
 
 
 # About EPIC-KITCHENS VISOR dataset
