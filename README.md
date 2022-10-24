@@ -3,6 +3,26 @@ This repository is to extract the dense frames of VISOR interpolations. VISOR we
 
 
 ## How to use
+
+### Interpolations correction
+**Before** using the interpolations, you **must run a correction script** to to able to get the same JPG extracted frames. Please follow these steps:
+- Download these 2 sparse jsons [ [P02_01](https://data.bris.ac.uk/datasets/2v6cgv1x04ol22qp9rm9x2j6a7/GroundTruth-SparseAnnotations/annotations/train/P02_01.json) , [P03_14](https://data.bris.ac.uk/datasets/2v6cgv1x04ol22qp9rm9x2j6a7/GroundTruth-SparseAnnotations/annotations/val/P03_14.json) ] to the script's directory.
+- Run the correction script (`correct_interpolations.py`) for each split (i.e train and val), the script has the following arguments:
+`input_dir`: a directory where the interpolations are, the interpolation json files must be directly under this directory.
+`output_dir`:a directory where the corrected interpolations would be stored, this could be the same `input_dir` directory.
+
+Sample run: 
+```
+For the train set interpolations:
+python correct_interpolations.py  --input_dir VISOR/Interpolations-DenseAnnotations/train --output_dir VISOR/Interpolations-DenseAnnotations/train
+
+For the val set interpolations:
+python correct_interpolations.py  --input_dir VISOR/Interpolations-DenseAnnotations/val --output_dir VISOR/Interpolations-DenseAnnotations/val
+
+```
+Once that is done, the interpolations are corrcted and ready to be used.
+
+### Frame extraction
 Open `generate_dense_frames.py` script and edit the paths with your local paths. The script will contains `generate_dense_images_from_video_jsons` function with those arguments:
 
 `json_files_path`: a path to JSON files you want to generate dense JPG images for.<br /> The path file structure would be like:<br>
